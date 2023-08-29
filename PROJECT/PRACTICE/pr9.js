@@ -1,16 +1,28 @@
-let nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3;
-
-function mergeSortedArray(nums1,m,nums2,n){
-nums1 = nums1.slice(0,m);
-nums1 = nums1.concat(nums2.slice(0,n));
-nums1.sort((a,b) => a-b);
-return nums1;
+let Pcount = 0;
+let Lcount = 2;
+let Acount = 0;
+let s = "PPALLL";
+for (let i = 0; i < s.length; i++) {
+    if (s[i] === "A") {
+        Acount++;
+    }
+    else if (s[i] === "P") {
+        Pcount++
+    }
+    else if (s[i] === "L" && s[i + 1] === "L" && s[i + 2] === "L") {
+        Lcount++;
+    }
 }
+console.log(Acount)
+console.log(Lcount)
+console.log(Pcount)
 
-let b = mergeSortedArray(nums1,m,nums2,n)
-console.log(b)
-
-console.log(1+1)
-console.log(1+"1")
-console.log("1"+1)
-console.log("1"+"1")
+if (Acount >= 2) {
+    console.log(false)
+}
+else if (Lcount >= 2) {
+    console.log(false)
+}
+else {
+    console.log(true)
+}
