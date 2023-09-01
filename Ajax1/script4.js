@@ -58,7 +58,8 @@ async function getUsersB() {
 // getUsersB()
 
 //3 Promise.race()
-//it is using try-catch metod
+//which is resolved first output of is shown 
+//it is handeled with try-catch metod
 //in case of any error(reject state it will exicute catch block)
 async function getUsersC() {
     try {
